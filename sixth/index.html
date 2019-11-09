@@ -1,10 +1,486 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<title>模仿腾讯网站</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.global {
+				width: 1150px;
+				height: 690px;
+				/*全局*/
+				margin: auto;
+			}
+			
+			.sousuobig {
+				width: 1150px;
+				height: 85px;
+				margin: auto;
+				/*腾讯网最顶框*/
+			}
+			
+			.top-logo {
+				width: 131px;
+				height: 37px;
+				/*腾讯图标*/
+				margin-left: 0px;
+				padding-top: 24px;
+				float: left;
+			}
+			
+			.scearchTxt {
+				width: 440px;
+				height: 30px;
+				/*搜索框*/
+				float: left;
+				margin-left: 190px;
+				margin-top: 25px;
+				border-radius: 20px;
+				background-color: ghostwhite;
+				border-color: darkgrey;
+			}
+			
+			.head {
+				width: 1150px;
+				height: 38px;
+				background-color: #4169E1;
+				padding-bottom: 10px;
+				padding-top: 7px;
+				border-radius: 4px;
+			}
+			
+			.nav {
+				list-style: none;
+				width: 1150px;
+				height: 45px;
+				overflow: hidden;
+				text-align: center;
+			}
+			
+			.nav li {
+				float: left;
+				width: 67px;
+				background-color: #4169E1;
+			}
+			
+			.nav li a {
+				color: azure;
+				line-height: 45px;
+				width: 55px;
+				height: 35px;
+				text-decoration: none;
+				display: block;
+				text-align: center;
+				font-weight: bold;
+			}
+			
+			a:link {
+				color: white;
+				text-decoration: none;
+			}
+			
+			.nav li a:hover {
+				color: #4169E1;
+				background: #F0FFFF;
+			}
+			
+			a:hover {
+				color: #4169E1;
+			}
+			
+			a:active {
+				color: #4169E1;
+				background: #F8F8FF;
+			}
+			
+			.content {
+				width: 1150px;
+				/*最大的内容*/
+				height: 550px;
+				margin: auto;
+				margin-top: 20px;
+			}
+			
+			.content1-2 {
+				width: 370px;
+				height: 550px;
+				margin-left: 20px;
+				float: left;
+			}
+			
+			.content1-2-1 {
+				width: 371px;
+				height: 80px;
+				padding-bottom: 20px;
+			}
+			
+			.content1-1-1 {
+				width: 760px;
+				height: 80px;
+				padding-bottom: 20px;
+			}
+			
+			.content1-1-2 {
+				width: 371px;
+				height: 450px;
+				float: left;
+				/*background-color: cadetblue;*/
+			}
+			
+			.content1-1-2-1 {
+				width: 50px;
+				height: 40px;
+			}
+			
+			.biaoti {
+				width: 100px;
+				height: 40px;
+			}
+			
+			.content1-1-2-2 {
+				width: 300px;
+				height: 40px;
+				float: right;
+			}
+			
+			.content1-1-2-2-3 {
+				width: 371px;
+				height: 260px;
+			}
+			
+			.content1-1-2-2-4 {
+				width: 371px;
+				height: 120px;
+			}
+			
+			.content1-1-3 {
+				width: 370px;
+				height: 450px;
+				margin-left: 19px;
+				float: left;
+			}
+			
+			.content1-2-2 {
+				width: 370px;
+				height: 134px;
+				padding-bottom: 20px;
+				float: left;
+			}
+			
+			.content2 {
+				width: 371px;
+				height: 89px;
+			}
+			
+			.fanren {
+				width: 371px;
+				height: 160px;
+			}
+			
+			.biaotixia {
+				width: 371px;
+				height: 220px;
+			}
+			
+			.left1 {
+				width: 200px;
+				height: 113px;
+				float: left;
+			}
+			
+			.left2 {
+				width: 200px;
+				height: 113px;
+				float: left;
+			}
+			
+			.shang {
+				width: 371px;
+				height: 32px;
+			}
+			
+			.QQzone {
+				width: 32px;
+				height: 32px;
+				float: right;
+				margin-top: 30px;
+				background: url(img/下载.png);
+				background-position: 0 0;
+			}
+			
+			.QQzone:hover {
+				width: 32px;
+				height: 32px;
+				float: right;
+				margin-top: 30px;
+				background: url(img/下载.png);
+				background-position: 0 120px;
+			}
+			
+			.QQemail {
+				width: 32px;
+				height: 32px;
+				float: right;
+				margin-top: 30px;
+				background: url(img/下载.png);
+				background-position: 0 76px;
+			}
+			
+			.QQemail:hover {
+				width: 32px;
+				height: 32px;
+				float: right;
+				margin-top: 30px;
+				background: url(img/下载.png);
+				background-position: 0 26px;
+			}
+			
+			.QQsign {
+				position: relative;
+				display: inline-block;
+				line-height: 32px;
+				text-align: center;
+				border: 1px solid #ededed;
+				background-color: #f5f5f5;
+				font-size: 15px;
+				width: 32px;
+				height: 32px;
+				float: right;
+				margin-top: 30px;
+			}
+			
+			.QQsign a {
+				color: #60a5e4;
+				margin-top: 30px;
+			}
+			
+			.QQsign:hover {
+				border: 1px solid #60a5e4;
+			}
+			
+			#sougou {
+				width: 600px;
+				height: 10px;
+				float: left;
+			}
+			
+			#SEARCH {
+				position: relative;
+				height: 30px;
+				margin: 17px 4px 0 184px;
+				border: 1px solid #dfdfdf;
+				background-color: #f3f6f8;
+				border-radius: 20px;
+			}
+			
+			#search {
+				position: relative;
+				height: 15px;
+				line-height: 1px;
+				margin: 0 0 0 10px;
+				border: none;
+				background-color: #f3f6f8;
+				width: 25px;
+			}
+			
+			#searchBtn {
+				position: absolute;
+				top: -1px;
+				right: -1px;
+				background: none;
+				border: none;
+				height: 33px;
+				line-height: 3px;
+				padding: 0 20px;
+				color: #FFF;
+				background-color: #1479d7;
+				border-radius: 20px;
+				font-size: 16px;
+				cursor: pointer;
+				margin: 0;
+			}
+		</style>
 	</head>
+
 	<body>
-		
+		<div class="global">
+			<div class="sousuobig">
+				<div class="top-logo"><img width="100%" src="img/qq_logo_2x.png" /></div>
+				<div id="sougou">
+
+					<div id="SEARCH">
+
+						<span style="margin:0px 15px;">网页</span>
+
+						<input id="search" autocomplete="off" />
+
+						<button id="searchBtn" type="submit">搜狗搜索</button>
+
+					</div>
+
+				</div>
+                <div class="tubio">
+
+				<div class="QQsign">
+
+					<a href="https://graph.qq.com/oauth2.0/show?which=Login&amp;display=pc&amp;response_type=code&amp;client_id=101487368&amp;redirect_uri=https%3A%2F%2Fpacaio.match.qq.com%2Fqq%2FloginBack%3Fsurl%3Dhttps%3A%2F%2Fwww.qq.com%2F&amp;state=5b481c68e379d" target="_blank">登陆</a>
+
+				</div>
+
+				<div class="QQemail">
+
+				</div>
+
+				<div class="QQzone">
+
+				</div>
+
+				
+			</div>
+    
+			</div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+			
+			<div class="head" align="center">
+				<ul class="nav">
+					<li>
+						<a href=" ">新闻</a>
+					</li>
+					<li>
+						<a href=" ">视频</a>
+					</li>
+					<li>
+						<a href="">图片</a>
+					</li>
+					<li>
+						<a href="">军事</a>
+					</li>
+					<li>
+						<a href="">体育</a>
+					</li>
+					<li>
+						<a href="">CBA</a>
+					</li>
+					<li>
+						<a href="">娱乐</a>
+					</li>
+					<li>
+						<a href="">财经</a>
+					</li>
+					<li>
+						<a href="">科技</a>
+					</li>
+					<li>
+						<a href="">时尚</a>
+					</li>
+					<li>
+						<a href="">汽车</a>
+					</li>
+					<li>
+						<a href="">房产</a>
+					</li>
+					<li>
+						<a href="">教育</a>
+					</li>
+					<li>
+						<a href="">文化</a>
+					</li>
+					<li>
+						<a href="">游戏</a>
+					</li>
+					<li>
+						<a href="">星座</a>
+					</li>
+					<li>
+						<a href="">更多</a>
+					</li>
+				</ul>
+			</div>
+			<div class="content">
+
+				<div class="content1-1-1">
+					<a href=""><img src="img/360截图20191106201455932.jpg" width="760px" height="70px"></a>
+				</div>
+				<div class="content1-1-2">
+					<div class="contentbao">
+						<div class="content1-1-2-1">
+							<a href="" style="font-family: '宋体';color: #4169E1;">
+								<h2>要闻</h2></a>
+						</div>
+
+					</div>
+					<div class="content1-1-2-2-3">
+						<hr>
+						<a href="" style="font-family: '宋体'; color: black;">
+							<h4>竞速“5G时代” 湖南蓄势待发驶入快车道</h4></a>&nbsp;
+						<a href="" style="font-family: '宋体'; color: black;">
+							<h5>习近平夫妇会见马克龙夫妇 习近平马克龙出席中法峰会...</h5></a>&nbsp;
+						<a href="" style="font-family: '宋体'; color: black;">
+							<h5>这些话，习近平讲给世界听 发出时代强音 共享美好未来</h5></a>&nbsp;
+						<a href="" style="font-family: '宋体'; color: black;">
+							<h5>东方风起 江河奔腾 开放创新 合作共赢</h5></a>&nbsp;
+						<a href="" style="font-family: '宋体'; color: black;">
+							<h5>以制度型开放优化营商环境 理上网来</h5></a>&nbsp;
+						<a href="" style="font-family: '宋体'; color: black;">
+							<h5>取消已加征关税是达成协议的必要条件 火焰蓝一周年</h5></a>&nbsp;
+						<a href="" style="font-family: '宋体'; color: black;">
+							<h5>进博会，为世界经济增添新动能 2019进博会</h5></a>&nbsp;
+					</div>
+					<div class="content1-1-2-2-4">
+						<div class="left1">
+							<img src="img/360截图20191108170311297.jpg" width="200px" height="113px" />
+						</div>
+						<div class="right1">
+							<a href="" style="font-family: '宋体';">北方地区雨雪降温中迎立冬 多地开启供暖季</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="content1-1-3">
+					<div class="biaoti">
+						<a href="" style="font-family: '宋体'; color: #4169E1;">
+							<h2>今日话题</h2></a>
+					</div>
+					<div class="biaotixia">
+						<hr>
+						<a href="" style="font-family: '宋体'; color: black;">
+							<h4>第二届进博会，亮点有这些</h4></a>&nbsp;
+						<a href="" style="font-family: '宋体'; color: black;">
+							<h5>人民日报评论| 让教师更好聚焦主业</h5></a>&nbsp;
+						<a href="" style="font-family: '宋体'; color: black;">
+							<h5>新京报| 悬赏1.8亿求解技术难题，也是为知识"市场估价"</h5></a>&nbsp;
+						<a href="" style="font-family: '宋体'; color: black;">
+							<h5>棱镜| 中国最大二手农机村的流量时代</h5></a>&nbsp;
+						<a href="" style="font-family: '宋体'; color: black;">
+							<h5>深网| “老赖”名单上的创业者们值得原谅吗？</h5></a>&nbsp;
+						<a href="" style="font-family: '宋体'; color: black;">
+							<h5>谷雨| 28岁上海金融女硬核抗癌380天 自救热文获医生点赞</h5></a>&nbsp;
+					</div>
+					<div class="fanren">
+						<div class="shang">
+							<img src="img/360截图20191108170421263.jpg" width="371" height="32" />
+						</div>
+						<div class="left2">
+							<img src="img/360截图20191108174544648.jpg" width="200" height="113"></div>
+						<div class="right">
+							<a href="" style="font-family: '宋体';">颜色不对是吗？当然不对啊！我太难了，也太懒了，将就一下吧。</a>
+						</div>
+					</div>
+				</div>
+				<div class="content1-2">
+					<div class="content1-2-1">
+						<a href=""><img src="img/360截图20191106202530368.jpg" width="373px" height="70px"></a>
+					</div>
+					<div class="content1-2-2">
+						<a href=""><img src="img/360截图20191106231208276.jpg" width="370px" height="134px"></a>
+					</div>
+				</div>
+			</div>
 	</body>
+
 </html>
