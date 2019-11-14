@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style>
+		.content {
+			width: 1200px;
+			height: auto;/*包含整个界面的盒子*/
+			margin: auto;
+		}
+		
+		.head {
+			width: 1200px;
+			height: 80px;/*装了导航栏的盒子*/
+			/*background: black;*/
+			margin: auto;
+		}
+		
+		.headsmall1 {
+			width: 190px;
+			height: 28px;
+			margin-top: 21px;/*天猫标志的盒子*/
+			float: left;
+		}
+		
+		.headsmall2 {
+			width: 190px;
+			hanging: 80px;/*右上角的图标的盒子*/
+			float: right;
+		}
+		
+		.big {
+			width: 1200px;
+			height: auto;/*head以下装所有东西的盒子*/
+			margin: auto;
+			margin-top: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		
+		.menu {
+			width: 217px;
+			height: 365px;
+			border: 1px solid darkgray;/*装商品的盒子*/
+			margin-top: 5px;
+		}
+		.menu:hover{
+			border: 3px solid #FF0000;
+			
+		}
+		.small1 {
+			width: 210px;
+			height: 210px;/*图片小盒子1*/
+			margin: auto;
+			margin-top: 3px;
+		}
+		.small2{
+			width: auto;
+			height: 45px;/*图片小盒子2  */
+		}
+		.small3{
+			width: auto;
+			height: auto;
+		}
+		.small4{
+			width: auto;
+			height: auto;
+		}
+		a:hover{
+			color: red;
+		}
+		*{
+			margin: 0;
+		}
+		@media only screen and (min-width: 480px) {
+			.menu{
+				flex-basis: 33%;
+			}
+		}
+		@media only screen and (min-width: 800px) {
+			.menu{
+				flex-basis: 15%;
+				flex-wrap: nowrap;
+			}
+		}
+		@media only screen and (min-width: px) {
+			.menu{
+				flex-basis: %;
+				flex-wrap: nowrap;
+			}
+		}
+		#sougou {
+				width: 680px;
+				height: 10px;
+				float: left;
+			}
+		#SEARCH {
+				position: relative;
+				height: 30px;
+				margin: 17px 4px 0 184px;
+				border: 3px solid red;
+				background-color: #f3f6f8;
+			}
+			
+			#search {
+				position: relative;
+				height: 15px;
+				line-height: 1px;
+				margin: 0 0 0 10px;
+				border: none;
+				background-color: #f3f6f8;
+				width: 25px;
+			}
+			
+			#searchBtn {
+				position: absolute;
+				top: -1px;
+				right: -1px;
+				background: none;
+				border: none;
+				height: 33px;
+				line-height: 3px;
+				padding: 0 20px;
+				color: #FFF;
+				background-color: red;
+				font-size: 16px;
+				cursor: pointer;
+				margin: 0;
+				}
+	</style>
+
+	<body>
+		<div class="content">
+		<div class="head">
+			<div class="headsmall1">
+				<a href="" class="a1"><img src="img/360截图20191113200838220.jpg" width="190" height="28"></a>
+			</div>
+			<div id="sougou">
+
+					<div id="SEARCH">
+
+						<span style="margin:0px 15px;">鞋子</span>
+
+						<input id="search" autocomplete="off" />
+
+						<button id="searchBtn" type="submit">搜索</button>
+
+					</div>
+
+				</div>
+			<div class="headsmall2">
+				<img src="img/360截图20191113200244488.jpg" width="190px" height="80px">
+			</div>
+		</div>
+		<div class="big">
+			<div class="menu" style="order: 1;">
+				<div class="small1">
+					<a href="" class="a1"><img src=" img/360截图20191113193556135.jpg" width="210px" height="210px"></a>
+				</div>
+				<div class="small2"><a href=" ">
+					<a href=""><img src="img/360截图20191114161922422.jpg" width="210px" height="38px"></a>
+				</div>
+				<div class="small3">
+					<img src="img/360截图20191114200511682.jpg" width="80px" height="40px">
+				</div>
+				<div class="small4">
+					<a href=""><h6>回力新款爆款百搭加绒运动休闲女鞋春腾鞋类专营店</h6></a>
+					<img src=" img/360截图20191114161604545.jpg" width="210px" height="33px">
+				</div>
+			</div>
+			<div class="menu" style="order: 2;">
+				<div class="small1">
+					<a href="" class="a1"><img src="img/360截图20191113203645006.jpg" width="210px" height="210px"></a>
+				</div>
+				<div class="small2"><a href=" ">
+					<a href=""><img src="img/360截图20191114162011147.jpg" width="210px" height="38px"></a>
+				</div>
+				<div class="small3">
+					<img src="img/360截图20191114200511682.jpg" width="80px" height="40px">
+				</div>
+				<div class="small4">
+					<a href=""><h6>回力新款爆款百搭加绒运动休闲女鞋春腾鞋类专营店</h6></a>
+					<img src=" img/360截图20191114161604545.jpg" width="210px" height="33px">
+				</div>
+			</div>
+			<div class="menu" style="order: 3;">
+				<div class="small1">
+					<a href="" class="a1"><img src="img/360截图20191113193710406.jpg" width="210px" height="210px"></a>
+				</div>
+				<div class="small2"><a href=" ">
+					<a href=""><img src="img/360截图20191113213320346.jpg" width="210px" height="38px"></a>
+				</div>
+				<div class="small3">
+					<img src="img/360截图20191114200511682.jpg" width="80px" height="40px">
+				</div>
+				<div class="small4">
+					<a href=""><h6>回力新款爆款百搭加绒运动休闲女鞋春腾鞋类专营店</h6></a>
+					<img src=" img/360截图20191114161604545.jpg" width="210px" height="33px">
+				</div>
+			</div>
+			<div class="menu" style="order: 4;">
+				<div class="small1">
+					<a href="" class="a1"><img src="img/360截图20191113193620724.jpg" width="210px" height="210px"></a>
+				</div>
+				<div class="small2"><a href=" ">
+					<a href=""><img src="img/360截图20191114161922422.jpg" width="210px" height="38px"></a>
+				</div>
+				<div class="small3">
+					<img src="img/360截图20191114200511682.jpg" width="80px" height="40px">
+				</div>
+				<div class="small4">
+					<a href=""><h6>回力新款爆款百搭加绒运动休闲女鞋春腾鞋类专营店</h6></a>
+					<img src=" img/360截图20191114161604545.jpg" width="210px" height="33px">
+				</div>
+			</div>
+			<div class="menu" style="order: 5;">
+				<div class="small1">
+					<a href="" class="a1"><img src="img/360截图20191113193454331.jpg" width="210px" height="210px"></a>
+				</div>
+				<div class="small2"><a href=" ">
+					<a href=""><img src="img/360截图20191114162011147.jpg" width="210px" height="38px"></a>
+				</div>
+				<div class="small3">
+					<img src="img/360截图20191114200511682.jpg" width="80px" height="40px">
+				</div>
+				<div class="small4">
+					<a href=""><h6>回力新款爆款百搭加绒运动休闲女鞋春腾鞋类专营店</h6></a>
+					<img src=" img/360截图20191114161604545.jpg" width="210px" height="33px">
+				</div>
+			</div>
+        </div>
+       </div>
+	</body>
+
+</html>
