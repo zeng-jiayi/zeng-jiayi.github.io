@@ -1,0 +1,281 @@
+
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8" />
+
+		<title></title>
+
+	<style>
+
+		
+
+			#box {
+
+				width: 800px;
+
+				margin: 30px auto;
+
+			}
+
+			
+
+			table {
+
+				width: 500px;
+
+				border: 1px solid gray;
+
+				border-collapse: collapse;
+
+				margin-top: 30px;
+
+			}
+
+			
+
+			table th {
+
+				line-height: 30px;
+
+				text-align: center;
+
+				border: 1px solid gray;
+
+			}
+
+			a{
+
+				color: black;
+
+				text-decoration: none;
+
+			}
+
+			a:hover{
+
+				color: red;
+
+			}
+
+			.box0{
+
+				/*background-image: url(img/青年大学习.png);*/
+
+			 background-size:cover; 
+
+				align-content: center;
+
+				background-repeat:no-repeat;
+
+				height: 780px;
+
+			}
+
+			img{
+
+			float: right;
+
+			}
+
+		</style>
+
+	</head>
+
+
+
+	<body>
+
+		 
+
+	<div class="box0">
+
+		<div  id="left" class="box1">
+
+			<form name="fan">
+
+				<br />
+
+				<br />
+
+				
+
+	    <h1>&nbsp;&nbsp;&nbsp;&nbsp;学&nbsp;&nbsp;&nbsp;生&nbsp;&nbsp;&nbsp;信&nbsp;&nbsp;&nbsp;息&nbsp;&nbsp;&nbsp;
+
+	    	统&nbsp;&nbsp;&nbsp;计&nbsp;&nbsp;&nbsp;表</h1>
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>学号</label>
+
+				<input type="number" id="idnumber" onchange="checkLength()" /></input>
+
+				<br />
+
+				<br />
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>姓名</label>
+
+				<input type="text" id="name" />
+
+				<br />
+
+				<br />
+
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>&nbsp;&nbsp;&nbsp;&nbsp;身体状况</label>
+
+				<input type="text" id="sex" />
+
+				<br />
+
+				<br />
+
+			</form>
+
+			
+
+		
+
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="createNewTr()">确认提交</button>
+
+			<table id="tabl">
+
+				
+
+				<tr>
+
+					<th>学号</th>
+
+					<th>姓名</th>
+
+					<th>身体状况</th>
+
+					
+
+					<th>修改</th>
+
+				</tr>
+
+				<tr>
+
+					<th>201905555xxx</th>
+
+					<th>XXX</th>
+
+					<th>良好/一般</th>
+
+					
+
+					<th>
+
+						<a href='#' onclick='removeRow(this)'>删除</a>
+
+					</th>
+
+				</tr>
+
+			</table>
+
+		</div>
+
+		</div>
+
+		<script type="text/javascript">
+
+			function createNewTr() {
+
+				var fidnumber=idnumber.value;
+
+				var fname=name.value;
+
+				var fsex=sex.value;
+
+				
+
+				if(fidnumber==""||fname==""||fsex==""){
+
+					alert("请将表格内容填写完整")
+
+					return;
+
+				}
+
+				tab = document.getElementById("tabl");
+
+				newTr = document.createElement("tr");
+
+				tab.appendChild(newTr);
+
+
+
+				th1 = document.createElement("th");
+
+				newTr.appendChild(th1);
+
+				th1.innerHTML = document.fan.idnumber.value;
+
+
+
+				th2 = document.createElement("th");
+
+				newTr.appendChild(th2);
+
+				th2.innerHTML = document.fan.name.value;
+
+
+
+				th3 = document.createElement("th");
+
+				newTr.appendChild(th3);
+
+				th3.innerHTML = document.fan.sex.value;
+
+
+
+				
+
+				th4 = document.createElement("th");
+
+				newTr.appendChild(th4);
+
+				th4.innerHTML = "<a href='javascript:void(0)' onclick='removeRow(this)'>删除</a>";
+
+			}
+
+
+
+			function removeRow(its) {
+
+				
+
+				var delRow = its.parentNode.parentNode;
+
+				delRow.parentNode.removeChild(delRow);
+
+			}
+
+			function checkLength(){
+
+				X=document.fan.idnumber.value.length;
+
+				if(X<12){
+
+					alert("请输入十二位以上的学号")
+
+				}
+
+			}
+
+		</script>
+
+	</body>
+
+
+
+</html>
