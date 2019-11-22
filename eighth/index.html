@@ -102,11 +102,10 @@
 
 				
 
-	    <h1>&nbsp;&nbsp;&nbsp;&nbsp;学&nbsp;&nbsp;&nbsp;生&nbsp;&nbsp;&nbsp;信&nbsp;&nbsp;&nbsp;息&nbsp;&nbsp;&nbsp;
-
-	    	统&nbsp;&nbsp;&nbsp;计&nbsp;&nbsp;&nbsp;表</h1>
-
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>学号</label>
+	    <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“e9”PPT路演大赛报名表
+	    	<br />
+	    	<br />
+	    	<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>电话号码</label>
 
 				<input type="number" id="idnumber" onchange="checkLength()" /></input>
 
@@ -114,7 +113,7 @@
 
 				<br />
 
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>姓名</label>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label>
 
 				<input type="text" id="name" />
 
@@ -122,27 +121,22 @@
 
 				<br />
 
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>&nbsp;&nbsp;&nbsp;&nbsp;身体状况</label>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级</label>
 
-				<input type="text" id="sex" />
+				<input type="text" id="sex" /></h3>
 
 				<br />
 
 				<br />
 
 			</form>
-
-			
-
-		
-
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
 
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="createNewTr()">确认提交</button>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="createNewTr()">提交</button>
 
 			<table id="tabl">
 
@@ -150,11 +144,11 @@
 
 				<tr>
 
-					<th>学号</th>
+					<th>电话号码</th>
 
 					<th>姓名</th>
 
-					<th>身体状况</th>
+					<th>班级</th>
 
 					
 
@@ -164,11 +158,11 @@
 
 				<tr>
 
-					<th>201905555xxx</th>
+					<th>XXXXXXXXXXX</th>
 
 					<th>XXX</th>
 
-					<th>良好/一般</th>
+					<th>网络工程二班</th>
 
 					
 
@@ -200,7 +194,7 @@
 
 				if(fidnumber==""||fname==""||fsex==""){
 
-					alert("请将表格内容填写完整")
+					/*alert("请将表格内容填写完整")*/
 
 					return;
 
@@ -264,13 +258,13 @@
 
 				X=document.fan.idnumber.value.length;
 
-				if(X<12){
+				if(X<11){
 
-					alert("请输入十二位以上的学号")
+					alert("您的号码不是十一位，请输入正确的电话号码")
 
 				}
 
-			}
+			
 
 		</script>
 
